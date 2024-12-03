@@ -1,0 +1,114 @@
+:root {
+    --light-cyan: hsl(193, 38%, 86%);
+    --neon-green: hsl(150, 100%, 66%);
+    --grayish-blue: hsl(217, 19%, 38%);
+    --dark-grayish-blue: hsl(217, 19%, 24%);
+    --dark-blue: hsl(218, 23%, 16%);
+    --fw-800: 800;
+}
+
+/* reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* constructor style */
+body {
+    font-family: 'Manrope', sans-serif;
+    background-color: var(--dark-blue);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--dark-grayish-blue);
+    gap: 1.4rem;
+    max-width: 34rem;
+    border-radius: 1rem;
+    padding: 3rem 3rem;
+    position: relative;
+}
+
+/* content style */
+h1 {
+    color: var(--neon-green);
+    font-weight: var(--fw-800);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+}
+
+p {
+    font-weight: var(--fw-800);
+    color: var(--light-cyan);
+    font-size: 1.7rem;
+    text-align: center;
+}
+
+.divider {
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}
+
+.wrap {
+    position: absolute;
+    bottom: -2rem;
+}
+
+.wrap:hover {
+    filter: drop-shadow(0 0 10px var(--neon-green));
+}
+
+.dice {
+    padding: 1.2rem;
+    background-color: var(--neon-green);
+    cursor: pointer;
+    clip-path: circle(50%);
+}
+
+/* mobile design */
+@media (max-width: 476px) {
+    body {
+        padding: 1rem
+    }
+
+    section {
+        padding: 1.4rem;
+    }
+
+    .visible {
+        content: url(images/pattern-divider-mobile.svg);
+    }
+
+    h1 {
+        font-size: 0.7rem;
+    }
+
+    p {
+        font-size: 1.4rem;
+    }
+
+}
